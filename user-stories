@@ -1,25 +1,51 @@
-## Story #[0]: [Basic room booking(employee)] 
+## Story #0: Basic room booking(employee)
 
-**As a** [company employee] 
-**I want to** [view available basic rooms by time and date] 
-**So that** [find a room that meets my needs and budget] 
+**As a** company employee 
+**I want to** view available basic rooms by time and date 
+**So that** find a room that meets my needs and budget
 
 ### Acceptance Criteria:
-- [ ] Given [context], When [action], Then [expected outcome]
-- [ ] Given [context], When [action], Then [expected outcome] 
-- [ ] Given [context], When [action], Then [expected outcome] 
+- [ ] Given I am logged in, When i select time and date, Then see a list of available rooms
+- [ ] Given no rooms aare available, When i search, Then it means no rooms are available 
+- [ ] Given rooms are available, When search results are displayed, Then rooms are dispayed with pricing
 
 ### Story Points: 
-[Choose from: 1, 2, 3, 5, 8, 13] 
+3 
 
 ### Priority: 
-[High / Medium / Low] 
+High 
 
 ### Dependencies:
-- List any dependent stories, or write “None” 
+- User must be Logged in or authenticated 
 
 ### Technical Notes:
-- Any assumptions, constraints, or technical considerations 
+- AnAvalability of data from existing scheduling sys data  
 
 ### Design Notes: 
-- UI / UX considerations or edge cases
+- Use a calender style 
+
+## Story #1: Recurring meetings setup(Employee)
+
+**As a** employee 
+**I want to** schedule a meeting that occurs frequently on a defined pattern 
+**So that** so not to manually create meetings the next time
+
+### Acceptance Criteria:
+- [ ] Given I creating a meeting, When i select a recurring option, Then i can choose a recurrence pattern(daily,weekly or monhly)
+- [ ] Given required fields are missing, When i save the meeting, Then all instances are created automatically
+- [ ] Given rooms required fields are missing, When i save, Then i must see a validation error
+
+### Story Points: 
+5 
+
+### Priority: 
+High
+
+### Dependencies:
+- Basic creation of meeting 
+
+### Technical Notes:
+- Recurrence rules should follow standard calender logic
+
+### Design Notes: 
+- Recurrence options should be simple and clearly labelled 
