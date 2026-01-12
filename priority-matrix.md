@@ -36,6 +36,14 @@
 |--------:|--------------------------|----------------|----------------------|----------|--------|
 | 10      | Admin Dashboard Viewing  | High           | Medium               | High     | 2      |
 
-| Story # | Title                       | Business Value | Technical Complexity | Priority | Sprint |
+| Story 6 | Title                       | Business Value | Technical Complexity | Priority | Sprint |
 |--------:|-------------------------------|----------------|----------------------|----------|--------|
-| 12      | Room Maintenance Scheduling  | High           | Medium               | High     | 2      |
+| 11      | Room Maintenance Scheduling  | High           | Medium               | High     | 2      |
+
+| Story 7 | Title                        | Business Value | Technical Complexity | Priority | Sprint |
+|--------:|-------------------------------|----------------|----------------------|----------|--------|
+| 12      | Visitor Booking Assistance   | High           | Medium               | High     | 2      |
+
+| Story 8 | Title                       | Business Value | Technical Complexity | Priority | Sprint |
+|--------:|-------------------------------|----------------|----------------------|----------|--------|
+| 13      | Booking Conflict Resolution  | High           | High                 | High     | 2      |
