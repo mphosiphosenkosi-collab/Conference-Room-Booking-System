@@ -30,3 +30,8 @@
 
 ## Epic 1: Room Maintenance Scheduling
 - Story #11: Room Maintenance Scheduling
+
+# Epic: Visitor Management System
+
+## Epic 1: Receptionist Booking Assistance
+- Story #12: Visitor Booking Assistance
