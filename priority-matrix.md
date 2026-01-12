@@ -4,3 +4,11 @@
 | 2       | Book a Conference Room         | High           | Medium              | High     | 1      |
 | 3       | Cancel or Modify a Booking     | Medium         | Medium              | Medium   | 2      |
 | 4       | View My Bookings               | Medium         | Low                 | Medium   | 2      |
+
+| Story 1 | Title                           | Business Value | Technical Complexity | Priority | Sprint |
+|--------:|---------------------------------|----------------|----------------------|----------|--------|
+| 1       | Set Up a Recurring Meeting      | High           | Medium               | High     | 1      |
+| 2       | Edit a Recurring Meeting Series | Medium         | High                 | Medium   | 2      |
+| 3       | Cancel a Recurring Meeting      | Medium         | Medium               | Medium   | 2      |
+| 4       | View Recurring Meetings         | Low            | Low                  | Low      | 3      |
+
