@@ -1,0 +1,25 @@
+## Story #[0]: [Basic room booking(employee)] 
+
+**As a** [company employee] 
+**I want to** [view available basic rooms by time and date] 
+**So that** [find a room that meets my needs and budget] 
+
+### Acceptance Criteria:
+- [ ] Given [context], When [action], Then [expected outcome]
+- [ ] Given [context], When [action], Then [expected outcome] 
+- [ ] Given [context], When [action], Then [expected outcome] 
+
+### Story Points: 
+[Choose from: 1, 2, 3, 5, 8, 13] 
+
+### Priority: 
+[High / Medium / Low] 
+
+### Dependencies:
+- List any dependent stories, or write “None” 
+
+### Technical Notes:
+- Any assumptions, constraints, or technical considerations 
+
+### Design Notes: 
+- UI / UX considerations or edge cases
