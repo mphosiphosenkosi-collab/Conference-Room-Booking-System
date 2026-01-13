@@ -134,11 +134,12 @@ High
 
 - Booking status must update in real time
 
-- Room availability must refresh after cancelation
+- Room availability must refresh after cancellation
 
 ### Design Notes
 
 - Confirmation dialog required
+- clear success feedback after cancelation
 
 ## Story #4 Room equipment requirements (employee)
 
@@ -165,6 +166,7 @@ High
 ### Dependencies
 
 - View available rooms
+
 
 ### Technical Notes
 
