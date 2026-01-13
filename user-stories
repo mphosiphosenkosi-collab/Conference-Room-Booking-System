@@ -4,15 +4,15 @@
 
 **As a** company employee
 **I want to** view available basic rooms by time and date
-**So that** i can find a room that meets my needs and budget
+**So that** find a room that meets my needs and budget
 
-### Acceptance Criteria
+### Story #1 Acceptance Criteria
 
-- [ ] Given I am an authenticated employee, When I select a valid date and time range, Then the system displays all available rooms for that period
+- [ ] Given I am logged in, When I select time and date, Then see a list of available rooms
 
-- [ ] Given no rooms are available for the selected time, When the search completes, Then I see a clear message stating "No rooms available"
+- [ ] Given no rooms are available, When I search, Then it means no rooms are available
 
-- [ ] Given rooms are available, When search results are displayed, Then each room shows name, capacity and price
+- [ ] Given rooms are available, When search results are displayed, Then rooms are displayed with pricing
 
 ### Story Points
 
@@ -42,11 +42,11 @@ High
 
 ### Acceptance Criteria
 
-- [ ] Given I am creating a meeting, When I select a recurring option, Then I can choose (daily, weekly or monthly) recurrence 
+- [ ] Given I am creating a meeting, When I select a recurring option, Then I can choose a recurrence pattern (daily, weekly or monthly)
 
-- [ ] Given required all fields are completed, When I save the meeting, Then all recurring instances are created automatically
+- [ ] Given required fields are missing, When I save the meeting, Then all instances are created automatically
 
-- [ ] Given required fields are missing, When I attempt to save, Then I see a validation error explaining what is missing
+- [ ] Given required fields are missing, When I save, Then I must see a validation error
 
 ### Story Points
 
@@ -76,11 +76,11 @@ High
 
 ### Acceptance Criteria
 
-- [ ] Given I am viewing available rooms, When I enter the number of attendees, Then only rooms with equal or greater capacity are displayed
+- [ ] Given I am viewing available rooms, When I enter the number of attendees, Then only rooms with sufficient capacity are displayed
 
-- [ ] Given no rooms meet the capacity requirement, When results load, Then a "No suitable rooms available" message is displayed
+- [ ] Given no rooms are available that meet capacity, When results are displayed, Then I must see a clear message warning "No suitable rooms available"
 
-- [ ] Given I update the attendee count, When the filter changes, Then the room list refreshes immediately 
+- [ ] Given I change the count, When the filter is updated, Then room list refreshes accordingly
 
 ### Story Points
 
@@ -128,18 +128,17 @@ High
 
 ### Dependencies
 
-- Existing confiremed booking
+- Cancel room
 
 ### Technical Notes
 
-- Booking status must update in real time
+- Room capacity data must be stored and searchable
 
-- Room availability must refresh after cancellation
+- Filtering should be performed in real time
 
 ### Design Notes
 
-- Confirmation dialog required
-- clear success feedback after cancelation
+- Display room capacity clearly in results
 
 ## Story #4 Room equipment requirements (employee)
 
@@ -166,7 +165,6 @@ High
 ### Dependencies
 
 - View available rooms
-
 
 ### Technical Notes
 
@@ -224,9 +222,11 @@ High
 
 - [ ] Given a room requires maintenance, When I schedule it, Then the room is marked as unavailable during that time
 
-- [ ] Given scheduled maintenance, When a user tries to book the room, Then they are notified that the room is unavailable
+- [ ] Given scheduled maintenance, When a user tries to book the room, Then user gets a notification "the room is unavailable"
 
 - [ ] Given maintenance is completed or cancelled, When the schedule updates, Then the room becomes available immediately
+
+- [ ] Given maintenance is scheduled, When the time overlaps an existing booking, Then the booking is prevented or flagged for admin resolution
 
 ### Story Points
 
@@ -243,6 +243,7 @@ High
 ### Technical Notes
 
 - Maintenance scheduling should integrate with room availability database
+- Maintenance bookings override employee bookings
 
 ### Design Notes
 
@@ -260,14 +261,14 @@ High
 
 - [ ] Given a visitor is scheduled, When the host or receptionist edits or cancels the booking, Then the changes are reflected immediately
 
-- [ ] Given a visitor booking is created, When the visitor arrives, Then check-in information is available for smooth reception
+- [ ] Given a visitor booking is created, When the visitor arrives, Then visitor name, host, time, and room are visible at reception
 
 ### Story Points
 
 5
 
 ### Priority
- 
+
 High
 
 ### Dependencies
@@ -317,6 +318,7 @@ High
 ### Technical Notes
 
 - Conflict detection logic must run in real time
+- Conflict detection depends on accurate time synchronization
 
 ### Design Notes
 
@@ -328,7 +330,7 @@ High
 
 **As a** Admin
 **I want to** generate usage reports for rooms and bookings
-**So that** I can analyze trends
+**So that** I can identify usage patterns and support data-driven decisions about room management 
 
 ### Acceptance Criteria
 
