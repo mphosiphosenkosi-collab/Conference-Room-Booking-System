@@ -4,7 +4,7 @@
 
 **As a** company employee
 **I want to** view available basic rooms by time and date
-**So that** find a room that meets my needs and budget
+**So that** find a room that meets all my meeting requirements
 
 ### Story #1 Acceptance Criteria
 
