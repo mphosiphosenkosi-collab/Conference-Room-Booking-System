@@ -31,3 +31,23 @@ outstsanding: 1 (External API depedency)
 Morale : fair
 Collaboration : Strong
 
+
+
+# Sprint 2 (Bad_Example)
+## Progress Snapshot
+
+- Planned points: 20
+- Completed Points: 10
+- In Progress : 10
+- Not started : 0
+- Status: On Track
+
+## At risk work
+- None
+
+## Blockers
+- None
+
+## Team Health
+- Morale : Perfect
+- Collaboration: Exellent
