@@ -29,6 +29,7 @@
 ## 1. Executive Summary
 
 ### 1.1 Sprint Goal Assessment
+
 Implement basic room booking functionality for employees
 
 ### 1.2 Overall Outcome
@@ -39,17 +40,18 @@ Partially Met
 
 ### 2.1 Completed Stories
 
-| Story ID | Title | Outcome | Acceptance Criteria Met |
-|----------|-------|---------|-------------------------|
-| US-1 | Basic Room Booking | Core booking functionality implemented with calendar view and basic validation | Partially (2/3 criteria) |
-| US-4 | Booking Cancellation | Cancel functionality with confirmation dialog implemented | Yes |
+| Story ID |         Title        |            Outcome                                                             | Acceptance Criteria Met  |
+|----------|----------------------|--------------------------------------------------------------------------------|--------------------------|
+| US-1     | Basic Room Booking   | Core booking functionality implemented with calendar view and basic validation | Partially (2/3 criteria) |
+
+| US-4     | Booking Cancellation | Cancel functionality with confirmation dialog implemented | Yes |
 
 ### 2.2 Incomplete Stories
 
-| Story ID | Title | Reason for Incompletion | Decision |
-|----------|-------|-------------------------|----------|
-| US-6 | Admin Dashboard Viewing | Complexity underestimated; ran out of time | Carry to Sprint 2 |
-| US-2 | Recurring Meetings Setup | Requirements unclear; "pattern" terminology vague | Split (Carry with clarified requirements) |
+| Story ID |            Title         |             Reason for Incompletion               |                         Decision                |
+|----------|--------------------------|---------------------------------------------------|-------------------------------------------------|
+| US-6     | Admin Dashboard Viewing  | Complexity underestimated; ran out of time        | Carry to Sprint 2                               |
+| US-2     | Recurring Meetings Setup | Requirements unclear; "pattern" terminology vague | Split (Carry with clarified requirements)       |
 
 ## 3. Stakeholder Feedback
 
@@ -69,4 +71,5 @@ Partially Met
 
 - Replace vague terminology in Story #2 ("set a pattern") with specific language ("schedule recurring meetings")
 - Add visual indicators for room availability status on calendar
-- Include capacity information in room selection view 
+- Include capacity information in room selection view
+ 
