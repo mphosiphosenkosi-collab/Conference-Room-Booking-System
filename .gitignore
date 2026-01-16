@@ -453,8 +453,11 @@ json
     "GenerateCaptions"
   ]
 }
+
 6. Testing Strategy
+
 6.1 Test Structure
+
 al
 // RoomBookingTest.Codeunit.al
 codeunit 50110 "Room Booking Test"
@@ -511,12 +514,14 @@ codeunit 50110 "Room Booking Test"
         RoomResource.Insert(true);
     end;
 }
+
 6.2 Test Categories
 Test Category	Purpose	Example Tests	Owner
 Unit Tests	Validate individual functions/methods	TestRoomCreation, TestCapacityValidation	Developers
 Integration Tests	Validate component interactions	TestBookingCreationFlow, TestAPIIntegration	QA Team
 Performance Tests	Validate system performance under load	TestBulkRoomImport, TestConcurrentBookings	Performance Team
 Security Tests	Validate security controls	TestPermissionSets, TestDataIsolation	Security Team
+
 6.3 Test Execution Commands
 bash
 # Run all tests
@@ -530,7 +535,9 @@ al test run -testSuiteName "DEFAULT" -enableCodeCoverage
 
 # Generate test results in XML format
 al test run -testSuiteName "DEFAULT" -resultsFile TestResults.xml
+
 7. Version Control Integration
+
 7.1 Git Workflow for AL Development
 bash
 # Feature branch workflow
@@ -556,7 +563,9 @@ git commit -m "feat: add room booking AL extension
 
 # Create pull request for review
 git push -u origin feature/room-booking-integration
+
 7.2 Code Review Checklist for AL
+
 Naming conventions follow AL standards
 
 Object IDs within allocated range (50100-50149)
@@ -574,14 +583,18 @@ Performance considerations for bulk operations
 Backward compatibility maintained for upgrades
 
 8. Troubleshooting & Best Practices
+
 8.1 Common Issues & Solutions
+
 Issue	Symptoms	Solution
 Symbols not loading	"Could not find package" errors	Run al package cache in AL directory
 Publish failures	Error 500 on publish	Check BC service running; restart container
 Test failures	Tests pass locally but fail in CI	Ensure test isolation; use Any codeunit
 Performance issues	Slow page loads in BC	Add indexes; optimize AL queries
 Upgrade failures	Data migration errors	Implement upgrade codeunits with error handling
+
 8.2 AL Development Best Practices
+
 Use explicit variable declaration: Avoid implicit with statements
 
 Implement error handling: Use if not Rec.Find() then exit; patterns
@@ -615,27 +628,36 @@ if Customer.FindSet() then
             // Process each customer
         end;
     until Customer.Next() = 0;
+
 9. Appendices
+
 9.1 Object ID Allocation
+
 Object Type	ID Range	Purpose	Owner
 Tables	50100-50119	Room and booking master data	Siphosenkosi
 Pages	50120-50139	User interface pages	Wendy
 Codeunits	50140-50149	Business logic and APIs	Mpho
 Reports	50150-50159	Reporting functionality	Team
 XMLPorts	50160-50169	Data import/export	Siphosenkosi
+
 9.2 Required Dependencies
+
 Dependency	Version	Purpose	Installation Method
 AL Language Extension	10.0+	VS Code development	VS Code Marketplace
 BC Container Helper	Latest	Local container management	PowerShell Gallery
 Docker Desktop	4.0+	Container runtime	Docker website
 Business Central	20.0+	Target platform	Microsoft
+
 9.3 Team Skills Matrix
+
 Team Member	AL Experience	Training Needs	Specialization
 Siphosenkosi	Advanced	None	Backend integration, APIs
 Wendy	Intermediate	Page design, AL controls	UI/UX, Page development
 Mpho	Beginner	Test framework, AL debugging	Testing, Quality assurance
 Romio	Basic	Project setup, deployment	Process, CI/CD pipelines
+
 9.4 Reference Documentation
+
 AL Documentation: Microsoft Docs
 
 BC Container Helper: GitHub Repository
@@ -645,6 +667,7 @@ AL Language Extension: VS Code Marketplace
 AppSource Validation: Technical Validation Checklist
 
 9.5 Support Contacts
+
 Issue Type	Contact	Response Time	Escalation Path
 AL Development	Siphosenkosi	< 4 hours	Romio
 BC Environment	Infrastructure Team	< 2 hours	Romio
@@ -661,6 +684,7 @@ Implement Room Resource table
 Create initial test suite
 
 Phase 2: Integration (Week 3-4)
+
 Implement booking synchronization
 
 Create API integration codeunits
@@ -670,6 +694,7 @@ Develop user interface pages
 Complete test coverage
 
 Phase 3: Deployment (Week 5)
+
 Set up CI/CD pipeline
 
 Perform UAT testing
