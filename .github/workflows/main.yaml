@@ -1,5 +1,5 @@
 # .github/workflows/main.yaml
-name: BitCube CI - Basic Validation
+name:  CI - Basic Validation
 
 on:
   push:
