@@ -46,6 +46,7 @@ The Conference Room Booking System is an **enterprise-grade application** design
 | **Calendar Integration** | Sync with Outlook/Google Calendar | ⏳ Future |
 
 ### **Technology Stack**
+
 ```yaml
 Backend:
   Framework: ASP.NET Core 8.0
@@ -91,7 +92,7 @@ Our CI pipeline automatically validates:
 Check the GitHub Actions tab for current status.
 
 📁 Repository Structure
-text
+
 conference-room-booking-system/
 ├── 📚 docs/                           # Project documentation
 │   ├── architecture/                  # System design decisions
@@ -137,7 +138,7 @@ Our GitHub Actions workflow validates:
 
 🔄 Development Workflow
 Branch Strategy
-bash
+
 main                    # Protected - production-ready documentation
 develop                 # Integration branch for features
 docs/feature-name       # Documentation improvements
@@ -153,7 +154,7 @@ ci(workflow): add markdown validation step
 PR Process for Class Assignments
 Branch Creation
 
-bash
+
 git checkout develop
 git pull origin develop
 git checkout -b docs/assignment-part-a
