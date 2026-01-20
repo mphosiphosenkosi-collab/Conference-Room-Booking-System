@@ -1,4 +1,5 @@
-📋 Conference Room Booking System
+# 📋 Conference Room Booking System
+
 https://img.shields.io/badge/.NET-8-512BD4?logo=dotnet&logoColor=white
 https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black
 https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white
@@ -34,40 +35,53 @@ Get the system running in under 5 minutes using Docker (recommended) or manual s
 
 Method A: Docker Setup (Fastest)
 
-# 1. Clone repository
+## 1. Clone repository
+
 git clone https://github.com/bitcube-dev/conference-room-booking-system.git
 cd conference-room-booking-system
 
-# 2. Configure environment (MANDATORY - see section below)
-cp .env.example .env
-# Edit .env with your credentials
+## 2. Configure environment (MANDATORY - see section below)
 
-# 3. Start all services
+cp .env.example .env
+
+## Edit .env with your credentials
+
+## 3. Start all services
+
 docker-compose up -d --build
 
-# 4. Verify services are running
+## 4. Verify services are running
+
 docker-compose ps
 
-# 5. Access applications:
-# • Web Interface: http://localhost:3000
-# • API Documentation: http://localhost:5000/swagger
-# • Database: localhost:1433 (SA credentials from .env)
-# • Redis Cache: localhost:6379
+## 5. Access applications:
+
+ • Web Interface: http://localhost:3000
+ • API Documentation: http://localhost:5000/swagger
+ • Database: localhost:1433 (SA credentials from .env)
+ • Redis Cache: localhost:6379
+
 Method B: Manual Development Setup
 
-# Backend (ASP.NET Core API)
+## Backend (ASP.NET Core API)
+
 cd src/backend/ConferenceRoomBooking
 dotnet restore
 dotnet ef database update --project ConferenceRoomBooking.API
 dotnet run --project ConferenceRoomBooking.API
-# API starts at http://localhost:5000
 
-# Frontend (React Application - new terminal)
+## API starts at http://localhost:5000
+
+## Frontend (React Application - new terminal)
+
 cd src/frontend/client-app
 npm install
 npm run dev
-# App starts at http://localhost:3000
+
+## App starts at http://localhost:3000
+
 ⚙️ Prerequisites
+
 Component	Minimum Version	Installation Guide	Verification Command
 .NET SDK	8.0	Official Download	dotnet --version
 Node.js	18.0	Node.js Download	node --version
@@ -77,10 +91,11 @@ Git	2.40+	Git SCM	git --version
 BitCube Standard: All team members must have these exact versions to ensure environment consistency.
 
 🔧 Environment Setup
+
 Critical Configuration Steps
 Create .env file (from template):
 
-bash
+
 cp .env.example .env
 Edit .env with these REQUIRED values:
 
