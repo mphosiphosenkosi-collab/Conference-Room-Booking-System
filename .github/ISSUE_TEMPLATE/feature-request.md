@@ -1,27 +1,19 @@
 ---
-name: Ì≤° Feature Request
-description: Propose improvements or new features
+name: "Feature Request"
+about: "Suggest improvements or new features for the Conference Room Booking System"
 title: "[FEATURE]: "
-labels: ["enhancement", "triage"]
+labels: ["enhancement"]
+assignees: ""
 ---
 
-## ÌæØ What problem will this solve?
-*What difficulty are you facing?*
+**Is your feature request related to a problem?**
+A clear and concise description of what the problem is.
 
-## Ì≤° What's your idea?
-*Describe your suggested solution*
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Ì≥à Why is this important?
-- **For users**:
-- **For the project**:
-- **For developers**:
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions you've considered.
 
-## ‚úÖ What needs to be done?
-- [ ] Step 1
-- [ ] Step 2
-- [ ] Step 3
-
-## ‚è±Ô∏è How urgent?
-- [ ] **Now** - Essential for next release
-- [ ] **Soon** - Important improvement
-- [ ] **Later** - Nice to have
+**Additional context**
+Add any other context about the feature request here.
