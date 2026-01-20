@@ -137,32 +137,109 @@ If not using Docker, initialize the database manually:
 cd src/backend/ConferenceRoomBooking.API
 dotnet ef database update
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
 conference-room-booking-system/
+├── 📚 docs/ # Comprehensive documentation
+│ ├── requirements/ # Requirements specifications
+│ ├── architecture/ # System design & ADRs
+│ ├── api/ # OpenAPI/Swagger specs
+│ ├── user-guides/ # End-user documentation
+│ └── deployment/ # Environment setup guides
+├── 🖥️ src/ # Source code
+│ ├── backend/ # ASP.NET Core 8.0 (Clean Architecture)
+│ │ ├── ConferenceRoomBooking.API/
+│ │ │ ├── Controllers/ # REST API endpoints
+│ │ │ ├── Middleware/ # Custom middleware
+│ │ │ ├── Program.cs # Application entry point
+│ │ │ └── appsettings.json # Configuration files
+│ │ ├── ConferenceRoomBooking.Domain/
+│ │ │ ├── Entities/ # Business entities
+│ │ │ ├── Enums/ # Domain enumerations
+│ │ │ ├── Exceptions/ # Custom exceptions
+│ │ │ └── ValueObjects/ # Domain value objects
+│ │ ├── ConferenceRoomBooking.Application/
+│ │ │ ├── Common/ # Shared application logic
+│ │ │ ├── Features/ # Feature implementations (CQRS)
+│ │ │ ├── Interfaces/ # Application contracts
+│ │ │ └── Mapping/ # Object mappings (AutoMapper)
+│ │ ├── ConferenceRoomBooking.Infrastructure/
+│ │ │ ├── Data/ # EF Core configurations
+│ │ │ ├── Identity/ # Authentication & authorization
+│ │ │ ├── Services/ # External service integrations
+│ │ │ └── Persistence/ # Repository implementations
+│ │ └── ConferenceRoomBooking.Tests/
+│ │ ├── UnitTests/ # Unit test suites (xUnit)
+│ │ └── IntegrationTests/ # Integration test suites
+│ └── frontend/ # React 18 + TypeScript
+│ └── client-app/
+│ ├── src/
+│ │ ├── components/ # Reusable UI components
+│ │ │ ├── common/ # Shared components (Button, Modal)
+│ │ │ ├── booking/ # Booking-specific components
+│ │ │ ├── rooms/ # Room-related components
+│ │ │ └── admin/ # Administration components
+│ │ ├── pages/ # Application pages/routes
+│ │ │ ├── Home/
+│ │ │ ├── Booking/
+│ │ │ ├── Rooms/
+│ │ │ └── Admin/
+│ │ ├── hooks/ # Custom React hooks
+│ │ ├── services/ # API service layers
+│ │ ├── store/ # State management (Context/Redux)
+│ │ ├── types/ # TypeScript definitions
+│ │ ├── utils/ # Utility functions
+│ │ ├── styles/ # Global styles & themes
+│ │ └── App.tsx # Application root component
+│ └── public/ # Static assets (favicon, images)
+├── 🧪 tests/ # Comprehensive test suites
+│ ├── unit/ # Unit tests (backend: xUnit, frontend: Jest)
+│ ├── integration/ # Integration tests (Testcontainers)
+│ ├── e2e/ # End-to-end tests (Playwright)
+│ └── performance/ # Performance tests (k6)
+├── ⚙️ scripts/ # Build & deployment automation
+│ ├── database/ # Database migration scripts
+│ ├── deployment/ # Deployment automation
+│ └── utilities/ # Development utilities
+├── 🐳 docker/ # Container configurations
+│ ├── backend.Dockerfile # Backend container definition
+│ ├── frontend.Dockerfile # Frontend container definition
+│ └── docker-compose.yml # Multi-container orchestration
+├── 📦 deployment/ # Deployment manifests
+│ ├── kubernetes/ # K8s deployment files
+│ └── iis/ # IIS deployment configurations
+└── 🔧 .github/ # GitHub workflows & templates
+├── workflows/ # CI/CD pipelines
+└── ISSUE_TEMPLATE/ # Issue & PR templates
 
-├── src/                           # Source Code
-│   ├── backend/                  # ASP.NET Core 8.0 (Clean Architecture)
-│   │   ├── ConferenceRoomBooking.API/     # REST API Controllers
-│   │   ├── ConferenceRoomBooking.Domain/  # Business Entities & Logic
-│   │   ├── ConferenceRoomBooking.Application/ # Use Cases & DTOs
-│   │   └── ConferenceRoomBooking.Infrastructure/ # EF Core, Services
-│   └── frontend/                 # React 18 + TypeScript
-│       └── client-app/
-│           ├── src/components/   # Reusable UI Components
-│           ├── src/pages/        # Application Routes
-│           ├── src/services/     # API Client Services
-│           └── src/store/        # State Management
-├── tests/                        # Comprehensive Test Suites
-│   ├── unit/                    # xUnit (C#) & Jest (TS)
-│   ├── integration/             # Testcontainers Integration
-│   └── e2e/                     # Playwright End-to-End
-├── docker/                      # Container Configuration
-│   ├── backend.Dockerfile
-│   ├── frontend.Dockerfile
-│   └── docker-compose.yml
-├── .github/workflows/           # CI/CD Pipelines
-└── docs/                        # Project Documentation
+
+
+### **Key Directories Explained**
+
+| Directory | Purpose | Critical Files |
+|-----------|---------|----------------|
+| `src/backend/*.Domain/` | Business logic, entities, domain rules | `Entities/Booking.cs`, `ValueObjects/TimeSlot.cs` |
+| `src/backend/*.Application/` | Use cases, CQRS handlers, DTOs | `Features/Bookings/CreateBookingCommand.cs` |
+| `src/backend/*.Infrastructure/` | External concerns, persistence, services | `Persistence/BookingRepository.cs` |
+| `src/frontend/client-app/src/components/` | Reusable UI components | `Booking/BookingForm.tsx`, `common/Button.tsx` |
+| `tests/e2e/` | User journey tests | `booking-flow.spec.ts`, `admin-dashboard.spec.ts` |
+| `docker/` | Container definitions | `docker-compose.yml` (full environment) |
+| `.github/workflows/` | CI/CD automation | `dotnet-ci.yml`, `react-ci.yml` |
+
+### **Quick Navigation Tips**
+
+```bash
+# Navigate to API controllers
+cd src/backend/ConferenceRoomBooking.API/Controllers/
+
+# Navigate to React components  
+cd src/frontend/client-app/src/components/booking/
+
+# Run specific test suites
+cd tests/e2e && npm test -- booking-flow.spec.ts
+
+# Access API documentation
+open docs/api/swagger.json
 
 🧪 Testing & Quality
 
