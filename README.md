@@ -136,6 +136,7 @@ dotnet ef database update
 🏗️ Project Structure
 
 conference-room-booking-system/
+
 ├── src/                           # Source Code
 │   ├── backend/                  # ASP.NET Core 8.0 (Clean Architecture)
 │   │   ├── ConferenceRoomBooking.API/     # REST API Controllers
