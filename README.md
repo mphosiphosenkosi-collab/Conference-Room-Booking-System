@@ -9,27 +9,17 @@ https://img.shields.io/badge/License-MIT-green.svg
 
 Enterprise solution automating meeting room scheduling with real-time availability, conflict prevention, and smart resource optimization. Reduces booking time by 70% and eliminates scheduling conflicts.
 
-📖 Table of Contents
+# 📖 Table of Contents
 
-**🚀 Quick Start**
-
-**⚙️ Prerequisites**
-
-**🔧 Environment Setup**
-
-**🏗️ Project Structure**
-
-**🧪 Testing & Quality**
-
-**🔄 Development Workflow**
-
-**📦 Deployment**
-
-**📞 Support & Contact**
-
-**📄 Documentation & Compliance**
-
-**🚀 Quick Start**
+## 🚀 Quick Start  →  #-quick-start
+## ⚙️ Prerequisites  →  #️-prerequisites
+## 🔧 Environment Setup  →  #-environment-setup
+## 🏗️ Project Structure  →  #️-project-structure
+## 🧪 Testing & Quality  →  #-testing--quality
+## 🔄 Development Workflow  →  #-development-workflow
+## 📦 Deployment  →  #-deployment
+## 📞 Support & Contact  →  #-support--contact
+## 📄 Documentation & Compliance  →  #-documentation--compliance
 
 Get the system running in under 5 minutes using Docker (recommended) or manual setup.
 
